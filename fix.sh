@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eux
-dirname=`dirname $0`
+dirname=$(basename $(pwd))
 find . -type f | xargs perl -pi -e "s/FIXME/$dirname/g"
 mv cmd/FIXME cmd/$dirname
+rm fix.sh
