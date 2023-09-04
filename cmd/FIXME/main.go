@@ -1,17 +1,19 @@
 package main
 
 import (
-	"fmt"
+	"context"
 	"log"
+
+	app "github.com/fujiwara/go-template"
 )
 
 func main() {
-	if err := run(); err != nil {
+	ctx := context.TODO()
+	if err := run(ctx); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func run() error {
-	fmt.Println("FIXME!")
-	return nil
+func run(ctx context.Context) error {
+	return app.Run(ctx)
 }
