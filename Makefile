@@ -13,4 +13,4 @@ install:
 	go install github.com/fujiwara/FIXME/cmd/FIXME
 
 dist:
-	goreleaser build --snapshot --rm-dist
+	goreleaser build --snapshot --clean
