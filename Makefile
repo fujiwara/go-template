@@ -1,7 +1,7 @@
 .PHONY: clean test
 
 FIXME: go.* *.go
-	go build -o $@ cmd/FIXME/main.go
+	go build -o $@ ./cmd/FIXME
 
 clean:
 	rm -rf FIXME dist/
